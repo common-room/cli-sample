@@ -1,0 +1,51 @@
+{
+  "name": "@commonroomio/cli-example-cr-agent",
+  "version": "0.1.0",
+  "description": "Reference agentic app over the cr CLI (account research + prospecting)",
+  "license": "Apache-2.0",
+  "private": true,
+  "author": "Common Room <hello@commonroom.io>",
+  "homepage": "https://github.com/common-room/cli-sample#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/common-room/cli-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/common-room/cli-sample/issues"
+  },
+  "keywords": [
+    "commonroom",
+    "cli",
+    "agent",
+    "ai-sdk",
+    "claude",
+    "sales"
+  ],
+  "type": "module",
+  "bin": {
+    "cr-agent": "./dist/index.js"
+  },
+  "scripts": {
+    "clean:artifacts": "rm -rf dist",
+    "compile": "tsc -b",
+    "prepublishOnly": "npm run compile",
+    "start": "node src/index.ts"
+  },
+  "files": [
+    "dist",
+    "prompts"
+  ],
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.78",
+    "@ai-sdk/openai": "^3.0.64",
+    "ai": "^6.0.183",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.8",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
